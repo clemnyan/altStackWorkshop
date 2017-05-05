@@ -57,3 +57,41 @@ var modal = new Vue({
 });
 
 // ADD CODE HERE TO CREATE A VUE INSTANCE
+var eventsPage = new Vue({
+
+  // We want to target the div with an id of 'events'
+  el: '#events',
+
+  // Here we can register any values or collections that hold data
+  // for the application
+  data: {
+    event: { user: '', name: '', description: '', date: '' },
+    events: []
+  },
+
+  // Anything within the mounted function will run when the application loads
+  mounted: function() {
+    // call fetchEvents here!
+    this.fetchEvents();
+
+  },
+
+  // Methods we want to use in our application are registered here
+  methods: {
+    // add fetchEvents, addEvent, and deleteEvent
+    fetchEvents: function() {
+  var events = [];
+  this.events = events;
+},
+
+addEvent: function() {
+  if(this.event.name) {
+    this.event.user = user;
+    // ADD CODE BELOW
+    // push the event to this.events below!
+
+    this.event = { name: '', user: '', description: '', date: '' };
+  }
+},
+  }
+});
